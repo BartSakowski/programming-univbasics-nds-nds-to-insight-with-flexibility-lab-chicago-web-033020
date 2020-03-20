@@ -71,17 +71,7 @@ end
 #end
 
 
-def movies_with_directors_set(source)
-  newAr=[]
-  i = 0
-  while i<source.length do
-    name_key=source[i][:name]
-    movie_value=source[i][:movies]
-    newAr << movies_with_director_key(name_key, movie_value)
-    i+=1
-  end
-newAr
-end
+
 
 
 
@@ -109,7 +99,17 @@ end
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
 
-
+  def movies_with_directors_set(source)
+    newAr=[]
+    i = 0
+    while i<source.length do
+      name_key=source[i][:name]
+      movie_value=source[i][:movies]
+      newAr << movies_with_director_key(name_key, movie_value)
+      i+=1
+    end
+  newAr
+  end
 
 # ----------------    End of Your Code Region --------------------
 # Don't edit the following code! Make the methods above work with this method
