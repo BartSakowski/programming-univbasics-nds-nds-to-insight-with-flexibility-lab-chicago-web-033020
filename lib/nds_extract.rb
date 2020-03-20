@@ -73,12 +73,11 @@ end
 
 def movies_with_directors_set(source)
   newAr=[]
-  i=0
+  i = 0
   while i<source.length do
     name_key=source[i][:name]
     movie_value=source[i][:movies]
-    newAr<<movies_with_director_key(name_key, movie_value)
-    
+    newAr << movies_with_director_key(name_key, movie_value)
     i+=1
   end
 newAr
@@ -90,10 +89,11 @@ def gross_per_studio(collection)
   new_hash = {}
   i = 0
   while i < collection.length do
-    new_hash[collection[i][:worldwide_gross]]
+    studio_key = collection[i][:studio]
+    gross_value = collection[i][:worldwide_gross]
+    new_hash[studio_key => gross_value]
     i += 1
   end
-
 new_hash
 end
 
