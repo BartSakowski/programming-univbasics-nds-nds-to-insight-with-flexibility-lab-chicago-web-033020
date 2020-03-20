@@ -54,6 +54,22 @@ end
   # Array of Hashes where each Hash represents a movie; however, they should all have a
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
+  
+def movies_with_directors_set(source)
+    # GOAL: For each director, find their :movies Array and stick it in a new Array
+    #
+    # INPUT:
+    # * source: An Array of Hashes containing director information including
+    # :name and :movies
+    #
+    # RETURN:
+    #
+    # Array of Arrays containing all of a director's movies. Each movie will need
+    # to have a :director_name key added to it.
+end
+
+
+
 
 
 
@@ -81,18 +97,6 @@ end
   # total of all the worldwide_gross numbers for every movie in the input Hash
 
 
-def movies_with_directors_set(source)
-  # GOAL: For each director, find their :movies Array and stick it in a new Array
-  #
-  # INPUT:
-  # * source: An Array of Hashes containing director information including
-  # :name and :movies
-  #
-  # RETURN:
-  #
-  # Array of Arrays containing all of a director's movies. Each movie will need
-  # to have a :director_name key added to it.
-end
 
 # ----------------    End of Your Code Region --------------------
 # Don't edit the following code! Make the methods above work with this method
