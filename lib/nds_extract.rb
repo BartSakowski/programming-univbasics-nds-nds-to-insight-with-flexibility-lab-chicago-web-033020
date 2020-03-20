@@ -86,7 +86,6 @@ def gross_per_studio(collection)
       else
         new_hash[studio_name] = movie_gross
       end
-    end
   new_hash
 end
 
