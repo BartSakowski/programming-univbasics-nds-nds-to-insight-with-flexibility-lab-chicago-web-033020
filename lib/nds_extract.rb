@@ -1,6 +1,6 @@
 # Provided, don't edit
 require 'directors_database'
-
+require 'pry'
 # A method we're giving you. This "flattens"  Arrays of Arrays so: [[1,2],
 # [3,4,5], [6]] => [1,2,3,4,5,6].
 
@@ -21,7 +21,7 @@ def flatten_a_o_a(aoa)
 end
 
 def movie_with_director_name(director_name, movie_data)
-  { 
+  {
     :title => movie_data[:title],
     :worldwide_gross => movie_data[:worldwide_gross],
     :release_year => movie_data[:release_year],
@@ -30,10 +30,15 @@ def movie_with_director_name(director_name, movie_data)
   }
 end
 
-
 # Your code after this point
-
 def movies_with_director_key(name, movies_collection)
+  new_array = []
+  i = 0
+  while i < movies_collection.length do
+    new_array << movie_with_director_name(name, movies_collection[i])
+    i += 1
+  end
+new_array
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
   # of movies and a directors name to the movie_with_director_name method
   # and accumulate the returned Array of movies into a new Array that's
@@ -52,6 +57,11 @@ end
 
 
 def gross_per_studio(collection)
+new_hash = {}
+
+
+
+
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
   # return a Hash that includes the total worldwide_gross of all the movies from
   # each studio.
