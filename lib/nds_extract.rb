@@ -82,6 +82,7 @@ def gross_per_studio(collection)
     result[collection[i][:studio] => 40]
     i += 1
   end
+  result
 end
 
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
