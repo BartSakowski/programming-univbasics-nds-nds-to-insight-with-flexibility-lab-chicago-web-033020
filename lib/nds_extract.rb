@@ -79,9 +79,8 @@ def gross_per_studio(collection)
   new_hash = {}
   i = 0
   while i < collection.length do
+    new_hash[collection[i][:studio] => collection[i][:worldwide_gross]]
 
-    studio_key = collection[i]
-    new_hash[studio_key[:name] => 0]
     i += 1
   end
   new_hash
