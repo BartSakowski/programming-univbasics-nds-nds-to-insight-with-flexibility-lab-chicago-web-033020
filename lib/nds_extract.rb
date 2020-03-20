@@ -79,7 +79,7 @@ def gross_per_studio(collection)
   new_hash = {}
   i = 0
   while i < collection.length do
-    new_hash[collection[i][:studio] => collection[i][:worldwide_gross]]
+    new_hash[collection[i][:studio], collection[i][:worldwide_gross]]
 binding.pry
     i += 1
   end
