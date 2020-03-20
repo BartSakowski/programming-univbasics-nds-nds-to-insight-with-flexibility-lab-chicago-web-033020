@@ -78,7 +78,7 @@ def movies_with_directors_set(source)
     name_key=source[i][:name]
     movie_value=source[i][:movies]
     newAr<<movies_with_director_key(name_key, movie_value)
-    #movie_with_director_name(input1是director name,input2是movie collection)
+    
     i+=1
   end
 newAr
