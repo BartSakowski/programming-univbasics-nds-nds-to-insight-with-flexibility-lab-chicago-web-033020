@@ -85,6 +85,7 @@ def gross_per_studio(collection)
       new_hash[studio_key => gross_value]
     else
       new_hash[studio_key => gross_value]
+    end
     i += 1
   end
 new_hash
