@@ -54,8 +54,10 @@ end
   # Array of Hashes where each Hash represents a movie; however, they should all have a
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
-  
-def movies_with_directors_set(source)
+
+#def movies_with_directors_set(source)
+
+
     # GOAL: For each director, find their :movies Array and stick it in a new Array
     #
     # INPUT:
@@ -66,10 +68,21 @@ def movies_with_directors_set(source)
     #
     # Array of Arrays containing all of a director's movies. Each movie will need
     # to have a :director_name key added to it.
+#end
+
+
+def movies_with_directors_set(source)
+  newAr=[]
+  i=0
+  while i<source.length do
+    name_key=source[i][:name]
+    movie_value=source[i][:movies]
+    newAr<<movies_with_director_key(name_key, movie_value)
+    #movie_with_director_name(input1是director name,input2是movie collection)
+    i+=1
+  end
+newAr
 end
-
-
-
 
 
 
