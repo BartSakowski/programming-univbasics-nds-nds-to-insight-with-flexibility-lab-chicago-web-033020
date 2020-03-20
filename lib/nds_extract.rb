@@ -79,16 +79,9 @@ def gross_per_studio(collection)
   new_hash = {}
   i = 0
   while i < collection.length do
-    studio_key = collection[i][:studio]
-    gross_value = collection[i][:worldwide_gross]
-    if new_hash.has_key?(studio_key)
-      new_hash[studio_key => gross_value]
-    else
-      new_hash[studio_key => gross_value]
-    end
+    new_hash[[:studio] => [:worldwide_gross]]
     i += 1
   end
-new_hash
 end
 
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
@@ -104,15 +97,15 @@ end
   # total of all the worldwide_gross numbers for every movie in the input Hash
 
   def movies_with_directors_set(source)
-    newAr=[]
+    new_array=[]
     i = 0
-    while i<source.length do
-      name_key=source[i][:name]
-      movie_value=source[i][:movies]
-      newAr << movies_with_director_key(name_key, movie_value)
+    while i < source.length do
+      name_key = source[i][:name]
+      movie_value = source[i][:movies]
+      new_array << movies_with_director_key(name_key, movie_value)
       i+=1
     end
-  newAr
+  new_array
   end
 
 
