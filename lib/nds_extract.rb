@@ -60,10 +60,10 @@ def gross_per_studio(collection)
   new_hash = {}
   i = 0
   while i < collection.length do
-    if new_hash.has_key?(collection[i][:studio])
-      new_hash[collection[i][:studio] => collection[i][:worldwide_gross]]
+    if new_hash.has_key?([i][:studio])
+      new_hash[[i][:studio] => [i][:worldwide_gross]]
     else
-      new_hash[collection[i][:studio] => collection[i][:worldwide_gross]]
+      new_hash[[i][:studio] => [i][:worldwide_gross]]
     end
     i += 1
   end
